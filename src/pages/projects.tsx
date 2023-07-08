@@ -1,5 +1,4 @@
 import React from "react";
-import MessageComponent from "../components/talk/MessageComponent";
 import ContactLink from "../components/talk/ContactLink";
 import { SiTwitter, SiDiscord, SiFirebase, SiJava, SiMysql, SiAmazonaws, SiHomebrew, SiCplusplus, SiAmazondynamodb, SiAngular } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
@@ -46,7 +45,7 @@ const Projects = ({ stats, topRepos }: AppProps) => {
 <h1 className="mt-36 font-bold text-4xl md:text-5xl mb-4">./ projects</h1>
 
 <h2 className="font-medium text-3xl mb-4">tech stack</h2>
-            <p className="text-gray-800 dark:text-gray-300 leading-6 font-light tracking-wide mb-6">
+            <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-6">
                 
                 I use a lot of languages, technologies, and development tools these are just to name a few, you can also formally find my tech stack on my Resume 
                 as well. My Resume can be sent upon request via E-mail.
@@ -74,7 +73,7 @@ const Projects = ({ stats, topRepos }: AppProps) => {
             </div>
 
             <h2 className="font-medium text-3xl mb-4">open-source projects</h2>
-            <p className="text-gray-800 dark:text-gray-300 leading-6 font-light tracking-wide mb-6">
+            <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-6">
                 I love developing open source projects on{" "}
                 <a
                     href="https://github.com/saigonu"

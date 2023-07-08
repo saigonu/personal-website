@@ -9,18 +9,13 @@ module.exports = {
         permanent: true,
       },
       {
-        source: '/twitter',
-        destination: 'https://twitter.com/evuj',
-        permanent: true,
-      },
-      {
         source: '/linkedin',
         destination: 'https://linkedin.com/in/saigonuguntla',
         permanent: true,
       },
       {
         source: '/new',
-        destination: '',
+        destination: '/',
         permanent: true,
       },
     ]

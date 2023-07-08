@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import React from "react";
-import MessageComponent from "../components/talk/MessageComponent";
 import ContactLink from "../components/talk/ContactLink";
 import { SiTwitter, SiDiscord } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 
 import TimeStatus from "../components/talk/TimeStatus";
+import Spotify from "../components/Spotify";
 
 const Index = () => {
     return (
@@ -21,7 +21,10 @@ const Index = () => {
             Software was meant to be light and feel effortless to use. As we're all developing new products so rapidly, bloat in our code is catching up with us. I design simple but effective, highly-scalable and real time products for the future.
             </p>
 
+            <Spotify />
         </motion.div>
+
+        
 
     );
 };

@@ -1,5 +1,4 @@
 import React from "react";
-import MessageComponent from "../components/talk/MessageComponent";
 import ContactLink from "../components/talk/ContactLink";
 import { SiTwitter, SiDiscord } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
@@ -23,32 +22,7 @@ const Talk = () => {
 
             <TimeStatus />
 
-            <div className="grid grid-cols-1 md:grid-cols-0 md:gap-4 mb-20">
-                <MessageComponent />
-
-                {/* <div className="row-start-1 md:row-auto">
-                    <ContactLink
-                        name="@0sai"
-                        icon={<SiDiscord className="w-6 h-6 text-[#5865F2]" />}
-                        link="https://discord.com/users/248540915780681728"
-                        borderColor="hover:border-[#5865F2]/50"
-                    />
-
-                    <ContactLink
-                        name="@evuj"
-                        icon={<SiTwitter className="w-6 h-6 text-[#1DA1F2]" />}
-                        link="https://twitter.com/evuj"
-                        borderColor="hover:border-[#1DA1F2]/50"
-                    />
-
-                    <ContactLink
-                        name=""
-                        icon={<FiMail className="w-6 h-6 text-gray-400" />}
-                        link=""
-                        borderColor="hover:border-gray-400/50"
-                    />
-                </div> */}
-            </div>
+        
         </motion.div>
     );
 };
