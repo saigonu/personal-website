@@ -15,7 +15,7 @@ const About = () => {
 
 <h1 className="mt-36 font-bold text-4xl md:text-5xl mb-4">About Me</h1>
 
-<h2 className="font-medium text-3xl mb-4">I.</h2>
+<h2 className="font-medium text-3xl mb-2">I.</h2>
 
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-4">
             I am a 3rd year Computer Science undergraduate who 
@@ -24,7 +24,7 @@ const About = () => {
             iOS applications and constantly looking for new opportunities to explore new fields and push my boundaries currently in cloud computing.
             </p>
 
-            <h2 className="font-medium text-3xl mb-4">II.</h2>
+            <h2 className="font-medium text-3xl mb-2">II.</h2>
 
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
             In the past, I have interned as a Software Engineer at Alameda County's government office in which I developed a full-stack 
