@@ -1,6 +1,6 @@
 import "../globals.css";
 import type { AppProps } from "next/app";
-import Spotify from "../components/Spotify";
+
 import Head from "next/head";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
@@ -36,10 +36,10 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                 <meta name="theme-color" content="#000000" />
                 <meta
                     name="keywords"
-                    content="cnrad, Conrad Crawford, Conrad, Crawford, web developer, github, typescript"
+                    content="sai, Sai Gonuguntla"
                 />
-                <meta name="description" content="Conrad Crawford - Software Engineer" />
-                <meta name="author" content="Conrad Crawford" />
+                <meta name="description" content="Sai Gonuguntla - Software Engineer" />
+                <meta name="author" content="Sai Gonuguntla" />
                 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
             </Head>
 
@@ -51,7 +51,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                     </AnimatePresence>
                     <Footer />
                 </div>
-                <Spotify />
             </div>
         </>
     );

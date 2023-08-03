@@ -15,10 +15,10 @@ const LandingButton = ({ name, link, selected }: { name: string; link: string; s
             <a
                 className={classNames(
                     selected
-                        ? "bg-black/10 dark:bg-[#c8c8dc]/10"
-                        : "bg-transparent hover:bg-gray-700/5 dark:hover:bg-[#c8c8dc]/5 dark:text-white",
-                    "cursor-pointer px-4 py-2 text-sm rounded-md text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-all duration-75"
-                )}
+                        ? "bg-black/10 dark:bg-[#c8c8dc]/10 dark:text-white"
+                        : "bg-black text-white hover:bg-gray-700/5 hover:text-white dark:hover:bg-[#c8c8dc]/5 dark:hover:text-white",
+                    "cursor-pointer px-4 py-2 text-sm rounded-md transition-all duration-75"
+                )}            
             >
                 {name}
             </a>
@@ -72,18 +72,18 @@ const Nav = () => {
 
     return (
         <>
-            <motion.div className="hidden z-[999] fixed w-[90%] md:w-[50rem] xs:flex flex-row justify-between items-center px-4 py-2 mt-4 md:mt-6 rounded-md bg-white/60 dark:bg-[#12181d]/60 border border-slate-800/50 backdrop-blur-lg">
+            <motion.div className="hidden z-[999] fixed w-[90%] md:w-[50rem] xs:flex flex-row justify-between items-center px-4 py-2 mt-4 md:mt-6 rounded-md bg-white/60 dark:bg-[#12181d]/0 border border-slate-800/50 backdrop-blur-lg">
                 <div className="flex flex-row items-center justify-between gap-2">
-                    <ThemeToggle />
-                    <LandingButton name="home" link="/" selected={router.pathname === "/"} />
-                    <LandingButton name="about me" link="/about" selected={router.pathname === "/about"} />
-                    <LandingButton name="projects" link="/projects" selected={router.pathname === "/projects"} />
-                    <LandingButton name="contact me" link="/contact" selected={router.pathname === "/contact"} />
+                    {/* <ThemeToggle /> */} 
+                    <LandingButton name="Home" link="/" selected={router.pathname === "/"} />
+                    <LandingButton name="About" link="/about" selected={router.pathname === "/about"} />
+                    <LandingButton name="Projects" link="/projects" selected={router.pathname === "/projects"} />
+                    {/* <LandingButton name="contact me" link="/contact" selected={router.pathname === "/contact"} /> */}
                 </div>
 
                 <div className="flex flex-row items-center justify-center gap-2 xs:gap-4">
                     <LinkButton
-                        title="GitHub"
+                        title=""
                         href={"https://github.com/saigonu"}
                         icon={
                             <SiGithub className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
@@ -91,15 +91,15 @@ const Nav = () => {
                     />
                 
                     <LinkButton
-                        title="LinkedIn"
+                        title=""
                         href={"https://linkedin.com/in/saigonuguntla"}
                         icon={
                             <SiLinkedin className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
                         }
                     />
                     <LinkButton
-                        title="Email"
-                        href={"mailto:21gonuguntsaiprane@gmail.com"}
+                        title=""
+                        href={"mailto:c1c13769-43b4-42c3-a503-687dcae993e2@anonaddy.me"}
                         icon={
                             <FiMail className="w-6 h-6 cursor-pointer hover:stroke-white stroke-gray-400 transition-colors" />
                         }
@@ -156,20 +156,12 @@ const Nav = () => {
 
                             <div className="flex flex-row items-center justify-center gap-6 py-4">
                                 <LinkButton
-                                    href={"https://github.com/cnrad"}
+                                    href={"https://github.com/saigonu"}
                                     icon={<SiGithub className="w-6 h-6 cursor-pointer" />}
                                 />
                                 <LinkButton
-                                    href={"https://twitter.com/notcnrad"}
-                                    icon={<SiTwitter className="w-6 h-6 cursor-pointer" />}
-                                />
-                                <LinkButton
-                                    href={"https://linkedin.com/in/cnrad"}
+                                    href={"https://linkedin.com/in/saigonuguntla"}
                                     icon={<SiLinkedin className="w-6 h-6 cursor-pointer" />}
-                                />
-                                <LinkButton
-                                    href={"mailto:hello@cnrad.dev"}
-                                    icon={<FiMail className="w-6 h-6 cursor-pointer" />}
                                 />
                             </div>
                         </motion.div>
