@@ -16,7 +16,7 @@ const LandingButton = ({ name, link, selected }: { name: string; link: string; s
                 className={classNames(
                     selected
                         ? "bg-black/10 dark:bg-[#c8c8dc]/10 dark:text-white"
-                        : "bg-black text-white hover:bg-gray-700/5 hover:text-white dark:hover:bg-[#c8c8dc]/5 dark:hover:text-white",
+                        : "bg-292524 text-white hover:bg-gray-700/5 hover:text-white dark:hover:bg-[#c8c8dc]/5 dark:hover:text-white",
                     "cursor-pointer px-4 py-2 text-sm rounded-md transition-all duration-75"
                 )}            
             >
@@ -72,13 +72,12 @@ const Nav = () => {
 
     return (
         <>
-            <motion.div className="hidden z-[999] fixed w-[90%] md:w-[50rem] xs:flex flex-row justify-between items-center px-4 py-2 mt-4 md:mt-6 rounded-md bg-white/60 dark:bg-[#12181d]/0 border border-slate-800/50 backdrop-blur-lg">
+            <motion.div className="hidden z-[999] fixed w-[90%] md:w-[50rem] xs:flex flex-row justify-between items-center px-4 py-2 mt-4 md:mt-6 rounded-md  dark:bg-[#12181d]/0 border border-slate-800/0 ">
                 <div className="flex flex-row items-center justify-between gap-2">
                     {/* <ThemeToggle /> */} 
                     <LandingButton name="Home" link="/" selected={router.pathname === "/"} />
                     <LandingButton name="About" link="/about" selected={router.pathname === "/about"} />
                     <LandingButton name="Projects" link="/projects" selected={router.pathname === "/projects"} />
-                    {/* <LandingButton name="contact me" link="/contact" selected={router.pathname === "/contact"} /> */}
                 </div>
 
                 <div className="flex flex-row items-center justify-center gap-2 xs:gap-4">
@@ -107,9 +106,9 @@ const Nav = () => {
                 </div>
             </motion.div>
 
-            <motion.div className="xs:hidden z-[990] fixed w-full flex flex-row justify-between items-center px-4 py-3 bg-white/60 dark:bg-[#12181d]/60 border-b border-slate-800/50 backdrop-blur-lg">
+            <motion.div className="xs:hidden z-[990] fixed w-full flex flex-row justify-between items-center px-4 py-3 bg-white/0 dark:bg-[#12181d]/0 border-b border-slate-800/0">
                 <div className="flex flex-row items-center justify-between gap-2">
-                    <ThemeToggle />
+                    
                 </div>
 
                 <div className="flex flex-row items-center justify-center">
@@ -128,7 +127,7 @@ const Nav = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.1, ease: "easeInOut" }}
-                            className="z-[500] fixed w-full h-screen overflow-hidden backdrop-blur-md bg-black/10 flex flex-col items-center justify-content"
+                            className="z-[500] fixed w-full h-screen overflow-hidden backdrop-blur-lg bg-black/0 flex flex-col items-center justify-content"
                         />
 
                         <motion.div
@@ -137,7 +136,7 @@ const Nav = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.1, ease: "easeInOut" }}
-                            className="flex flex-col items-center justify-start mt-16 fixed w-full h-auto z-[700] bg-white dark:bg-[#090c0f] border-x border-b border-slate-800/30"
+                            className="flex flex-col items-center justify-start mt-16 fixed w-full h-auto z-[700] bg-white dark:bg-[#292524] border-x border-b border-slate-800/10"
                         >
                             <div className="flex flex-row w-full justify-evenly">
                                 <MobileLandingButton
@@ -147,9 +146,15 @@ const Nav = () => {
                                     onClick={() => setMenuOpen(false)}
                                 />
                                 <MobileLandingButton
-                                    name="Contact"
-                                    link="/contact"
-                                    selected={router.pathname === "/contact"}
+                                    name="About"
+                                    link="/about"
+                                    selected={router.pathname === "/about"}
+                                    onClick={() => setMenuOpen(false)}
+                                />
+                                <MobileLandingButton
+                                    name="Projects"
+                                    link="/projects"
+                                    selected={router.pathname === "/projects"}
                                     onClick={() => setMenuOpen(false)}
                                 />
                             </div>

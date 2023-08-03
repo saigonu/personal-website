@@ -6,12 +6,12 @@ interface TechProps {
     icon: IconType;
 }
 
-export const TechItem = ({ name, icon }: TechProps) => {
+
+export const TechItem = ({icon: Icon, name}: TechProps) => {
     return (
-        <li className="flex p-2">
-            <Tooltip title={name} position={"top"} duration={250}>
-                <span>{icon({ className: "h-6 w-6" })}</span>
-            </Tooltip>
-        </li>
+        <li className="flex flex-col items-center p-2">
+        <span className="mb-1">{Icon({ className: 'h-6 w-6' })}</span>
+        <span>{name}</span>
+      </li>
     );
 };
