@@ -72,8 +72,8 @@ const Nav = () => {
 
     return (
         <>
-            <motion.div className="hidden z-[999] fixed w-[90%] md:w-[50rem] xs:flex flex-row justify-between items-center px-4 py-2 mt-4 md:mt-6 rounded-md  dark:bg-[#12181d]/0 border border-slate-800/0 ">
-                <div className="flex flex-row items-center justify-between gap-2">
+<motion.div className="hidden z-[999] fixed w-[90%] md:w-[50rem] xs:flex flex-row justify-between items-center px-4 py-2 mt-4 md:mt-6 rounded-md bg-[#292524] border border-slate-800/0">
+  <div className="flex flex-row items-center justify-between gap-2">
                     {/* <ThemeToggle /> */} 
                     <LandingButton name="Home" link="/" selected={router.pathname === "/"} />
                     <LandingButton name="About" link="/about" selected={router.pathname === "/about"} />

@@ -17,7 +17,7 @@ const Index = () => {
            <div>
             <img src="/message.png" alt="Welcome Message"/>
             </div>
-            <h1 className="mt-24 font-bold text-4xl md:text-5xl mb-4">Sai Gonuguntla</h1>
+            <h1 className="mt-24 font-bold text-4xl md:text-5xl mb-1">Sai Gonuguntla</h1>
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12"> 
             Software was envisioned to embody be light and easy for usage. However, as we forge ahead with the rapid development of new products, the burden of bloated code is beginning to take its toll. I design simple but effective, highly-scalable and real time products for the future.
             </p>
