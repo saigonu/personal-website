@@ -96,13 +96,6 @@ const Nav = () => {
                             <SiLinkedin className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
                         }
                     />
-                    <LinkButton
-                        title=""
-                        href={"mailto:c1c13769-43b4-42c3-a503-687dcae993e2@anonaddy.me"}
-                        icon={
-                            <FiMail className="w-6 h-6 cursor-pointer hover:stroke-white stroke-gray-400 transition-colors" />
-                        }
-                    />
                 </div>
             </motion.div>
 
