@@ -72,7 +72,7 @@ const Nav = () => {
 
     return (
         <>
-<motion.div className="hidden z-[999] fixed w-[90%] md:w-[50rem] xs:flex flex-row justify-between items-center px-4 py-2 mt-4 md:mt-6 rounded-md bg-[#292524] border border-slate-800/0">
+<motion.div className="hidden z-[999] fixed top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[50rem] xs:flex flex-row justify-between items-center px-4 py-4 md:py-6 rounded-md bg-[#292524] border border-slate-800/0">
   <div className="flex flex-row items-center justify-between gap-2">
                     {/* <ThemeToggle /> */} 
                     <LandingButton name="Home" link="/" selected={router.pathname === "/"} />
@@ -171,3 +171,4 @@ const Nav = () => {
 };
 
 export default Nav;
+
