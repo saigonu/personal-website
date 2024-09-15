@@ -9,7 +9,7 @@ const Footer = () => {
         const fetchCommitDate = async () => {
             try {
                 const response = await axios.get(
-                    `https://api.github.com/repos/saigonu/personal-website/commits/${commitHash}`
+                    `https://api.github.com/repos/saigonu/personal-website/commit/${commitHash}`
                 );
                 const date = new Date(response.data.commit.committer.date);
                 setCommitDate(date.toDateString());
