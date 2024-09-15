@@ -9,7 +9,7 @@ const Footer = () => {
         const fetchCommitDate = async () => {
             try {
                 const response = await axios.get(
-                    `https://api.github.com/repos/your-username/your-repo/commits/${commitHash}`
+                    `https://api.github.com/repos/saigonu/personal-website/commits/${commitHash}`
                 );
                 const date = new Date(response.data.commit.committer.date);
                 setCommitDate(date.toDateString());
@@ -30,7 +30,7 @@ const Footer = () => {
                 Last updated with commit{" "}
                 <a
                     className="text-gray-400"
-                    href={`https://github.com/your-username/your-repo/commit/${commitHash}`}
+                    href={`https://github.com/saigonu/personal-website/commit/${commitHash}`}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
