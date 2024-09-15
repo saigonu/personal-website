@@ -3,13 +3,13 @@ import axios from "axios";
 
 const Footer = () => {
     const [commitDate, setCommitDate] = useState<string>(new Date().toDateString());
-    const commitHash = process.env.VERCEL_GIT_COMMIT_SHA || "Unknown";
+    const commitHash = process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA || "Unknown";
 
     useEffect(() => {
         const fetchCommitDate = async () => {
             try {
                 const response = await axios.get(
-                    `https://api.github.com/repos/saigonu/personal-website/commit/${commitHash}`
+                    `https://api.github.com/repos/saigonu/personal-website/commits/${commitHash}`
                 );
                 const date = new Date(response.data.commit.committer.date);
                 setCommitDate(date.toDateString());
