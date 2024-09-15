@@ -3,7 +3,6 @@ import type { AppProps } from "next/app";
 
 import Head from "next/head";
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 import { AnimatePresence } from "framer-motion";
 import { Router } from "next/router";
 
@@ -40,7 +39,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                 />
                 <meta name="description" content="Sai Gonuguntla - Software Engineer" />
                 <meta name="author" content="Sai Gonuguntla" />
-                <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
             </Head>
 
             <div className="text-black dark:text-white flex flex-row justify-center w-full h-full   dark:from-black dark:to-[#292524] min-h-screen">
@@ -49,7 +47,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                     <AnimatePresence exitBeforeEnter>
                         <Component {...pageProps} key={router.pathname} />  
                     </AnimatePresence>
-                    <Footer />
                 </div>
             </div>
         </>

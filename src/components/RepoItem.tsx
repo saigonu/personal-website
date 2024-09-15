@@ -59,9 +59,9 @@ const RepoItem = ({ name, description, stars, forks, language }: RepoProps) => {
 };
 
 const calc = (x: number, y: number) => [
-  -(y - window.innerHeight / 2) / 30, // Increase the denominator for a more subtle tilt
+  -(y - window.innerHeight / 2) / 30,
   (x - window.innerWidth / 2) / 30,
-  1.05, // Slight scaling for levitation
+  1.05,
 ];
 
 const trans = (x: number, y: number, s: number): string => 
