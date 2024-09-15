@@ -1,26 +1,26 @@
 import React from "react";
-import { SiTwitter, SiDiscord, SiFirebase, SiJava, SiMysql, SiAmazonaws, SiHomebrew, SiCplusplus, SiAmazondynamodb, SiAngular } from "react-icons/si";
+import { SiFirebase, SiJava, SiMysql, SiAmazonaws, SiHomebrew, SiCplusplus, SiAmazondynamodb, SiAngular} from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 import {
     SiVisualstudiocode,
-    SiRust,
     SiGit,
     SiDocker,
     SiNextdotjs as SiNextJs,
     SiNodedotjs as SiNodeJs,
-    SiPostgresql,
     SiReact,
-    SiRedis,
     SiStyledcomponents as SiStyledComponents,
     SiTailwindcss as SiTailwindCSS,
     SiTypescript,
-    SiYarn,
     SiSwift,
     SiJavascript,
     SiPython,
-    SiPrisma,
+    SiGo,
+    SiTerraform,
+    SiGrafana,
+    SiDotnet,
+
 } from "react-icons/si";
 import { TechItem } from "../components/TechItem";
 import RepoItem from "../components/RepoItem";
@@ -52,7 +52,7 @@ const Projects = ({ stats, topRepos }: AppProps) => {
             </p>
             <div className="w-full flex flex-wrap flex-row justify-center p-1 border  rounded-md bg-white/10 dark:bg-black/10 mb-7">
                 <TechItem icon={SiTypescript} name="TypeScript" />
-                <TechItem icon={SiVisualstudiocode} name="VS Code" />
+                <TechItem icon={SiGo} name="Go" />
                 <TechItem icon={SiReact} name="React.js" />
                 <TechItem icon={SiJavascript} name="JavaScript" />
                 <TechItem icon={SiNextJs} name="Next.js" />
@@ -68,6 +68,9 @@ const Projects = ({ stats, topRepos }: AppProps) => {
                 <TechItem icon={SiAmazonaws} name="AWS" />
                 <TechItem icon={SiDocker} name="Docker" />
                 <TechItem icon={SiSwift} name="Swift" />
+                <TechItem icon={SiTerraform} name="Terraform" />
+                <TechItem icon={SiGrafana} name="Grafana" />
+                <TechItem icon={SiDotnet} name=".NET" />
             </div>
 
             <h2 className="font-medium text-3xl mb-1">II.</h2>
