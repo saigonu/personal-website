@@ -1,5 +1,5 @@
 import React from "react";
-import { SiFirebase, SiJava, SiMysql, SiAmazonaws, SiCplusplus, SiAmazondynamodb, SiAngular} from "react-icons/si";
+import { SiFirebase, SiMysql, SiAmazonaws, SiCplusplus, SiAmazondynamodb, SiAngular} from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 import { motion } from "framer-motion";
 
@@ -56,7 +56,6 @@ const Projects = ({ stats, topRepos }: AppProps) => {
                 <TechItem icon={SiTailwindCSS} name="TailwindCSS" />
                 <TechItem icon={SiCplusplus} name="C++" />
                 <TechItem icon={SiFirebase} name="Firebase" />
-                <TechItem icon={SiJava} name="Java" />
                 <TechItem icon={SiMysql} name="MySQL" />
                 <TechItem icon={SiAmazondynamodb} name="DynamoDB" />
                 <TechItem icon={SiAngular} name="Angular" />

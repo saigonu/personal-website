@@ -7,7 +7,7 @@ const Status: React.FC = () => {
   const listening = data?.spotify || null;
 
   const coding = data?.activities?.find(
-    (a) => a.name === "Visual Studio Code"
+    (a: { name: string; }) => a.name === "Visual Studio Code"
   ) || null;
 
   const codeImage = coding?.assets?.large_image
