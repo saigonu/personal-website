@@ -7,21 +7,22 @@ import ThemeToggle from "./ThemeToggle";
 import { classNames } from "../util/classNames";
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
-import { Tooltip } from "react-tippy";
 
 const LandingButton = ({ name, link, selected }: { name: string; link: string; selected: boolean }) => {
     return (
         <Link href={link}>
-            <a
+            <motion.a
                 className={classNames(
                     selected
-                        ? "bg-black/10 dark:bg-[#c8c8dc]/10 dark:text-white"
-                        : "bg-292524 text-white hover:bg-gray-700/5 hover:text-white dark:hover:bg-[#c8c8dc]/5 dark:hover:text-white",
-                    "cursor-pointer px-4 py-2 text-sm rounded-md transition-all duration-75"
-                )}            
+                        ? "bg-white/10 dark:bg-black/10 dark:text-white"
+                        : "bg-292523 text-white/50 hover:bg-gray-700/5 hover:text-white dark:hover:bg-black/5 dark:hover:text-white",
+                    "cursor-pointer px-4 py-2 text-base rounded-md transition-all duration-75"
+                )}
+                whileHover={{ rotate: 2 }} 
+                transition={{ type: "spring", stiffness: 500 }}
             >
                 {name}
-            </a>
+            </motion.a>
         </Link>
     );
 };
@@ -39,42 +40,46 @@ const MobileLandingButton = ({
 }) => {
     return (
         <Link href={link}>
-            <a
+            <motion.a
                 className={classNames(
-                    selected ? "bg-black/10 dark:bg-[#c8c8dc]/10" : "bg-transparent dark:text-white",
-                    "flex flex-grow justify-center border border-slate-800/30 cursor-pointer w-auto py-4 text-base text-black/80 dark:text-white/80 transition-all duration-75"
+                    selected ? "bg-black/10 dark:bg-black/10" : "bg-transparent dark:text-white",
+                    "flex flex-grow justify-center dark:text-white cursor-pointer w-auto py-4 text-black/80 dark:black/10 transition-all duration-75"
                 )}
                 onClick={onClick}
+                whileHover={{ rotate: 5 }}
+                transition={{ type: "spring", stiffness: 300 }}
             >
                 {name}
-            </a>
+            </motion.a>
         </Link>
     );
 };
 
 const LinkButton = ({ title, icon, href }: any) => {
     return (
-        <Tooltip title={title} position={"top"} duration={250}>
-            <a target="_blank" rel="noreferrer" href={href}>
+            <motion.a
+                target="_blank"
+                rel="noreferrer"
+                href={href}
+                whileHover={{ rotate: 5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+            >
                 {icon}
-            </a>
-        </Tooltip>
+            </motion.a>
     );
 };
 
 const Nav = () => {
     const router = useRouter();
-
     const [mobileMenuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => {
-        setMenuOpen(old => !old);
+        setMenuOpen((old) => !old);
     };
 
     return (
         <>
-<motion.div className="hidden z-[999] fixed top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[50rem] xs:flex flex-row justify-between items-center px-4 py-4 md:py-6 rounded-md bg-[#292524] border border-slate-800/0">
-  <div className="flex flex-row items-center justify-between gap-2">
-                    {/* <ThemeToggle /> */} 
+            <motion.div className="hidden z-[999] fixed top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[50rem] xs:flex flex-row justify-between items-center text-white px-4 py-4 md:py-6 rounded-md bg-[#2e1065]">
+                <div className="flex flex-row items-center justify-between gap-2">
                     <LandingButton name="Home" link="/" selected={router.pathname === "/"} />
                     <LandingButton name="About" link="/about" selected={router.pathname === "/about"} />
                     <LandingButton name="Projects" link="/projects" selected={router.pathname === "/projects"} />
@@ -82,30 +87,24 @@ const Nav = () => {
 
                 <div className="flex flex-row items-center justify-center gap-2 xs:gap-4">
                     <LinkButton
-                        title=""
+                        title="GitHub"
                         href={"https://github.com/saigonu"}
-                        icon={
-                            <SiGithub className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
-                        }
+                        icon={<SiGithub className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />}
                     />
-                
+
                     <LinkButton
-                        title=""
+                        title="LinkedIn"
                         href={"https://linkedin.com/in/saigonuguntla"}
-                        icon={
-                            <SiLinkedin className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
-                        }
+                        icon={<SiLinkedin className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />}
                     />
                 </div>
             </motion.div>
 
-            <motion.div className="xs:hidden z-[990] fixed w-full flex flex-row justify-between items-center px-4 py-3 bg-white/0 dark:bg-[#12181d]/0 border-b border-slate-800/0">
-                <div className="flex flex-row items-center justify-between gap-2">
-                    
-                </div>
+            <motion.div className="xs:hidden z-[990] fixed w-full text-white flex flex-row justify-between items-center px-4 py-3 bg-white/0 dark:bg-[#2e1065]/0">
+                <div className="flex flex-row items-center justify-between gap-2"></div>
 
-                <div className="flex flex-row items-center justify-center">
-                    <button onClick={toggleMenu} className="h-9 w-9 flex items-center justify-center">
+                <div className="flex flex-row text-white items-center justify-center">
+                    <button onClick={toggleMenu} className="h-9 w-9 flex items-center text-white justify-center">
                         {!mobileMenuOpen ? <HiMenu className="w-7 h-7" /> : <HiX className="w-7 h-7" />}
                     </button>
                 </div>
@@ -120,7 +119,7 @@ const Nav = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.1, ease: "easeInOut" }}
-                            className="z-[500] fixed w-full h-screen overflow-hidden backdrop-blur-lg bg-black/0 flex flex-col items-center justify-content"
+                            className="z-[500] fixed text-white w-full h-screen overflow-hidden backdrop-blur-lg bg-black/0 flex flex-col items-center justify-content"
                         />
 
                         <motion.div
@@ -129,9 +128,9 @@ const Nav = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.1, ease: "easeInOut" }}
-                            className="flex flex-col items-center justify-start mt-16 fixed w-full h-auto z-[700] bg-white dark:bg-[#292524] border-x border-b border-slate-800/10"
+                            className="flex flex-col items-center justify-start mt-16 fixed w-full h-auto z-[700] bg-white dark:bg-[#2e1065] border-x border-b text-white border-slate-800/10"
                         >
-                            <div className="flex flex-row w-full justify-evenly">
+                            <div className="flex flex-row w-full text-white justify-evenly">
                                 <MobileLandingButton
                                     name="Home"
                                     link="/"
@@ -171,4 +170,3 @@ const Nav = () => {
 };
 
 export default Nav;
-

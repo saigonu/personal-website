@@ -21,7 +21,7 @@
         "react-spring": "^9.4.4",
         "react-tippy": "^1.4.0",
         "swr": "^1.0.1",
-        "use-lanyard": "^1.0.1"
+        "use-lanyard": "^1.5.2"
     },
     "devDependencies": {
         "@types/node": "20.2.5",

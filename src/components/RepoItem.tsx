@@ -33,7 +33,7 @@ const RepoItem = ({ name, description, stars, forks, language }: RepoProps) => {
         style={{ transform: xys.to(trans) }}
         className="flex flex-col h-36 p-4 bg-white/10 dark:bg-black/10 rounded-md border border-slate-400 duration-300 shadow-lg cursor-pointer"
       >
-        <h1 className="font-semibold mb-1">{name}</h1>
+        <h2 className="font-semibold mb-1">{name}</h2>
         <p className="text-sm text-gray-800/70 dark:text-gray-100/70">
           {description.charAt(0).toUpperCase() + description.slice(1)}
         </p>

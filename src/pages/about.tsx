@@ -18,17 +18,15 @@ const About = () => {
 <h2 className="font-medium text-3xl mb-12">I.</h2>
 
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
-            I am a 4th year Computer Science undergraduate at UC Davis who 
-            is passionate about exploring software technology and tackling complex challenges and driving meaningful impact through 
-            innovative product development. I have experience with developing robust full-stack web applications and creating engaging 
-            iOS applications and constantly looking for new opportunities to explore new fields and push my boundaries currently in cloud computing.
+            I am a fourth-year Computer Science undergraduate at <a href="https://www.ucdavis.edu/" className="font-bold underline underline-offset-2 decoration-2 hover:no-underline decoration-sky-500">UC Davis</a> who 
+            is passionate about exploring software technology and tackling complex challenges while driving meaningful impact through innovative product development. I have experience with developing robust full-stack web applications and creating engaging iOS applications and constantly looking for new opportunities to explore new fields and push my boundaries.
+            Right now interested in: Cloud Computing, DevOps, and Machine Learning.
             </p>
 
             <h2 className="font-medium text-3xl mb-12">II.</h2>
 
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
-            In the past, I have interned as a Software Engineer at Alameda County's government office in which I developed a full-stack 
-            self-service reports dashboard web application with AngularJS, .NET, MySQL database. I am open to new positions.
+            I have interned as a Software Engineer in the past and got to learn a lot about software development (which over time I have learned is more than just coding). I have interned at an Information & Technology Department, a blazingly-fast startup, and a great company. (I don't want to get into the 'nitty-gritty' that is where my Resume comes into play.) 
                 </p>
         </motion.div>
     );
