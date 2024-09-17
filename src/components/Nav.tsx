@@ -5,12 +5,33 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import ThemeToggle from "./ThemeToggle";
 import { classNames } from "../util/classNames";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 
 const LandingButton = ({ name, link, selected }: { name: string; link: string; selected: boolean }) => {
+    const isExternal = link.startsWith("http");
+
+    if (isExternal) {
+        return (
+            <motion.a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classNames(
+                    selected
+                        ? "bg-white/10 dark:bg-black/10 dark:text-white"
+                        : "bg-292523 text-white/50 hover:bg-gray-700/5 hover:text-white dark:hover:bg-black/5 dark:hover:text-white",
+                    "cursor-pointer px-4 py-2 text-base rounded-md transition-all duration-75"
+                )}
+                whileHover={{ rotate: 2 }}
+                transition={{ type: "spring", stiffness: 500 }}
+            >
+                {name}
+            </motion.a>
+        );
+    }
     return (
-        <Link href={link}>
+        <Link href={link} passHref>
             <motion.a
                 className={classNames(
                     selected
@@ -18,7 +39,7 @@ const LandingButton = ({ name, link, selected }: { name: string; link: string; s
                         : "bg-292523 text-white/50 hover:bg-gray-700/5 hover:text-white dark:hover:bg-black/5 dark:hover:text-white",
                     "cursor-pointer px-4 py-2 text-base rounded-md transition-all duration-75"
                 )}
-                whileHover={{ rotate: 2 }} 
+                whileHover={{ rotate: 2 }}
                 transition={{ type: "spring", stiffness: 500 }}
             >
                 {name}
@@ -38,6 +59,27 @@ const MobileLandingButton = ({
     selected: boolean;
     onClick: () => void;
 }) => {
+    const isExternal = link.startsWith("http");
+
+    if (isExternal) {
+        return (
+            <motion.a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classNames(
+                    selected ? "bg-black/10 dark:bg-black/10" : "bg-transparent dark:text-white",
+                    "flex flex-grow justify-center dark:text-white cursor-pointer w-auto py-4 text-black/80 dark:black/10 transition-all duration-75"
+                )}
+                onClick={onClick}
+                whileHover={{ rotate: 5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+            >
+                {name}
+            </motion.a>
+        );
+    }
+
     return (
         <Link href={link}>
             <motion.a
@@ -57,45 +99,66 @@ const MobileLandingButton = ({
 
 const LinkButton = ({ title, icon, href }: any) => {
     return (
-            <motion.a
-                target="_blank"
-                rel="noreferrer"
-                href={href}
-                whileHover={{ rotate: 5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-            >
-                {icon}
-            </motion.a>
+        <motion.a
+            target="_blank"
+            rel="noreferrer"
+            href={href}
+            whileHover={{ rotate: 5 }}
+            transition={{ type: "spring", stiffness: 300 }}
+        >
+            {icon}
+        </motion.a>
     );
 };
 
 const Nav = () => {
     const router = useRouter();
     const [mobileMenuOpen, setMenuOpen] = useState(false);
+    const [scrollY, setScrollY] = useState(0);
+
     const toggleMenu = () => {
-        setMenuOpen((old) => !old);
+        setMenuOpen(old => !old);
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
         <>
-            <motion.div className="hidden z-[999] fixed top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[50rem] xs:flex flex-row justify-between items-center text-white px-4 py-4 md:py-6 rounded-md bg-[#2e1065]">
+            <motion.div
+                className={classNames(
+                    "hidden z-[999] fixed top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[50rem] xs:flex flex-row justify-between items-center text-white px-4 py-4 md:py-6 rounded-md bg-[#2e1065] transition-all",
+                    scrollY > 50 ? "backdrop-blur-md bg-white/30 dark:bg-[#2e1065]/30" : "bg-transparent"
+                )}
+            >
                 <div className="flex flex-row items-center justify-between gap-2">
                     <LandingButton name="Home" link="/" selected={router.pathname === "/"} />
                     <LandingButton name="About" link="/about" selected={router.pathname === "/about"} />
                     <LandingButton name="Projects" link="/projects" selected={router.pathname === "/projects"} />
+                    <LandingButton name="Blog" link="https://saig-blog.vercel.app/" selected={false} />
                 </div>
 
                 <div className="flex flex-row items-center justify-center gap-2 xs:gap-4">
                     <LinkButton
                         title="GitHub"
                         href={"https://github.com/saigonu"}
-                        icon={<SiGithub className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />}
+                        icon={
+                            <SiGithub className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
+                        }
                     />
-
                     <LinkButton
                         title="LinkedIn"
                         href={"https://linkedin.com/in/saigonuguntla"}
-                        icon={<SiLinkedin className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />}
+                        icon={
+                            <SiLinkedin className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
+                        }
                     />
                 </div>
             </motion.div>
@@ -147,6 +210,12 @@ const Nav = () => {
                                     name="Projects"
                                     link="/projects"
                                     selected={router.pathname === "/projects"}
+                                    onClick={() => setMenuOpen(false)}
+                                />
+                                <MobileLandingButton
+                                    name="Blog"
+                                    link="https://saig-blog.vercel.app/" 
+                                    selected={false}
                                     onClick={() => setMenuOpen(false)}
                                 />
                             </div>
