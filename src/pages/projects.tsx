@@ -56,9 +56,7 @@ interface Repo {
   
       fetchPublicRepos();
     }, []);
-  
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error}</p>;
+
 
     const filteredRepos = publicRepos.filter(repo => repo.name !== 'saigonu');
   
