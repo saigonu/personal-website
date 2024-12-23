@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useMotionTemplate } from "framer-motion";
 import { AiOutlineStar } from "react-icons/ai";
 import { BiGitRepoForked } from "react-icons/bi";
-import { SiTypescript, SiJavascript, SiGo, SiPython, SiCplusplus, SiSwift, SiDotnet } from "react-icons/si";
+import { SiTypescript, SiJavascript, SiGo, SiPython, SiCplusplus, SiSwift, SiDotnet, SiJupyter } from "react-icons/si";
 
 const Languages = {
     TypeScript: "#2b7489",
@@ -26,6 +26,7 @@ const languageIcons: { [key: string]: JSX.Element } = {
     "C++": <SiCplusplus size={16} />,
     "Swift": <SiSwift size={16} />,
     ".NET": <SiDotnet size={16} />,
+    "Jupyter Notebook": <SiJupyter size={16} />,
 };
 
 const ROTATION_RANGE = 13;
