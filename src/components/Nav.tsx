@@ -115,9 +115,14 @@ const Nav = () => {
     const router = useRouter();
     const [mobileMenuOpen, setMenuOpen] = useState(false);
     const [scrollY, setScrollY] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(old => !old);
+    };
+
+    const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
     };
 
     useEffect(() => {
@@ -125,17 +130,28 @@ const Nav = () => {
             setScrollY(window.scrollY);
         };
         window.addEventListener("scroll", handleScroll);
+        window.addEventListener("resize", handleResize);
+
+        handleResize();
+
         return () => {
             window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", handleResize);
         };
     }, []);
+
+    useEffect(() => {
+        if (!isMobile) {
+            setMenuOpen(false);
+        }
+    }, [isMobile]);
 
     return (
         <>
             <motion.div
                 className={classNames(
-                    "hidden z-[999] fixed top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[50rem] xs:flex flex-row justify-between items-center text-white px-4 py-4 md:py-6 rounded-md bg-[#2e1065] transition-all",
-                    scrollY > 50 ? "backdrop-blur-md bg-white/30 dark:bg-[#2e1065]/30" : "bg-transparent"
+                    "hidden z-[999] fixed top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[50rem] xs:flex flex-row justify-between items-center text-white px-4 py-4 md:py-6 rounded-md bg-[#262626] transition-all",
+                    scrollY > 50 ? "backdrop-blur-md bg-white/30 dark:bg-[#262626]/30" : "bg-transparent"
                 )}
             >
                 <div className="flex flex-row items-center justify-between gap-2">
@@ -163,7 +179,7 @@ const Nav = () => {
                 </div>
             </motion.div>
 
-            <motion.div className="xs:hidden z-[990] fixed w-full text-white flex flex-row justify-between items-center px-4 py-3 bg-white/0 dark:bg-[#2e1065]/0">
+            <motion.div className="xs:hidden z-[990] fixed w-full text-white flex flex-row justify-between items-center px-4 py-3 bg-white/0 dark:bg-[#262626]/0">
                 <div className="flex flex-row items-center justify-between gap-2"></div>
 
                 <div className="flex flex-row text-white items-center justify-center">
@@ -191,7 +207,7 @@ const Nav = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.1, ease: "easeInOut" }}
-                            className="flex flex-col items-center justify-start mt-16 fixed w-full h-auto z-[700] bg-white dark:bg-[#2e1065] border-x border-b text-white border-slate-800/10"
+                            className="flex flex-col items-center justify-start mt-16 fixed w-full h-auto z-[700] bg-white dark:bg-[#262626] border-x border-b text-white border-slate-800/10"
                         >
                             <div className="flex flex-row w-full text-white justify-evenly">
                                 <MobileLandingButton
@@ -214,13 +230,14 @@ const Nav = () => {
                                 />
                                 <MobileLandingButton
                                     name="Blog"
-                                    link="https://saig-blog.vercel.app/" 
+                                    link="https://saig-blog.vercel.app/"
                                     selected={false}
                                     onClick={() => setMenuOpen(false)}
                                 />
                             </div>
 
-                            <div className="flex flex-row items-center justify-center gap-6 py-4">
+                            {/* Social Links */}
+                            <div className="flex flex-row items-center justify-center gap-6 py-4 mt-4">
                                 <LinkButton
                                     href={"https://github.com/saigonu"}
                                     icon={<SiGithub className="w-6 h-6 cursor-pointer" />}

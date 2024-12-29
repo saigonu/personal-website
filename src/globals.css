@@ -10,7 +10,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: Karla, sans-serif;
-    background: #2e1065;
+    background: rgb(38 38 38 / var(--tw-bg-opacity, 1));
     overscroll-behavior-y: none;
 }
 

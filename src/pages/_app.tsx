@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             <div className="relative text-black dark:text-white flex flex-row justify-center w-full h-full dark:from-black dark:to-[#292524] min-h-screen">
                 {/* Stars Background */}
                 <StarsBackground
-                    starDensity={0.0003}
+                    starDensity={0.001}
                     allStarsTwinkle={true}
                     twinkleProbability={0.7}
                     minTwinkleSpeed={0.5}
@@ -53,8 +53,8 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                     maxSpeed={30}
                     minDelay={1200}
                     maxDelay={4200}
-                    starColor="#9E00FF"
-                    trailColor="#2EB9DF"
+                    starColor="#FFFFFF"
+                    trailColor="#FFFFFF"
                     starWidth={10}
                     starHeight={1}
                     className="absolute inset-0 z-10"
