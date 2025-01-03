@@ -3,7 +3,6 @@ import { SiTwitter, SiGithub, SiLinkedin } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import ThemeToggle from "./ThemeToggle";
 import { classNames } from "../util/classNames";
 import { useState, useEffect } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -23,8 +22,6 @@ const LandingButton = ({ name, link, selected }: { name: string; link: string; s
                         : "bg-292523 text-white/50 hover:bg-gray-700/5 hover:text-white dark:hover:bg-black/5 dark:hover:text-white",
                     "cursor-pointer px-4 py-2 text-base rounded-md transition-all duration-75"
                 )}
-                whileHover={{ rotate: 2 }}
-                transition={{ type: "spring", stiffness: 500 }}
             >
                 {name}
             </motion.a>
@@ -39,8 +36,6 @@ const LandingButton = ({ name, link, selected }: { name: string; link: string; s
                         : "bg-292523 text-white/50 hover:bg-gray-700/5 hover:text-white dark:hover:bg-black/5 dark:hover:text-white",
                     "cursor-pointer px-4 py-2 text-base rounded-md transition-all duration-75"
                 )}
-                whileHover={{ rotate: 2 }}
-                transition={{ type: "spring", stiffness: 500 }}
             >
                 {name}
             </motion.a>
@@ -72,8 +67,6 @@ const MobileLandingButton = ({
                     "flex flex-grow justify-center dark:text-white cursor-pointer w-auto py-4 text-black/80 dark:black/10 transition-all duration-75"
                 )}
                 onClick={onClick}
-                whileHover={{ rotate: 5 }}
-                transition={{ type: "spring", stiffness: 300 }}
             >
                 {name}
             </motion.a>
@@ -88,8 +81,6 @@ const MobileLandingButton = ({
                     "flex flex-grow justify-center dark:text-white cursor-pointer w-auto py-4 text-black/80 dark:black/10 transition-all duration-75"
                 )}
                 onClick={onClick}
-                whileHover={{ rotate: 5 }}
-                transition={{ type: "spring", stiffness: 300 }}
             >
                 {name}
             </motion.a>
@@ -99,13 +90,7 @@ const MobileLandingButton = ({
 
 const LinkButton = ({ title, icon, href }: any) => {
     return (
-        <motion.a
-            target="_blank"
-            rel="noreferrer"
-            href={href}
-            whileHover={{ rotate: 5 }}
-            transition={{ type: "spring", stiffness: 300 }}
-        >
+        <motion.a target="_blank" rel="noreferrer" href={href}>
             {icon}
         </motion.a>
     );
@@ -150,14 +135,16 @@ const Nav = () => {
         <>
             <motion.div
                 className={classNames(
-                    "hidden z-[999] fixed top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[50rem] xs:flex flex-row justify-between items-center text-white px-4 py-4 md:py-6 rounded-md bg-[#262626] transition-all",
-                    scrollY > 50 ? "backdrop-blur-md bg-white/30 dark:bg-[#262626]/30" : "bg-transparent"
+                    "hidden z-[999] fixed top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[50rem] xs:flex flex-row justify-between items-center text-white px-4 py-4 md:py-6 rounded-md bg-[#0d0d0d] transition-all",
+                    scrollY > 50 ? "backdrop-blur-md bg-white/30 dark:bg-[#0d0d0d]/75" : "bg-transparent"
                 )}
             >
                 <div className="flex flex-row items-center justify-between gap-2">
                     <LandingButton name="Home" link="/" selected={router.pathname === "/"} />
                     <LandingButton name="About" link="/about" selected={router.pathname === "/about"} />
+                    <LandingButton name="Work" link="/work" selected={router.pathname === "/work"} />
                     <LandingButton name="Projects" link="/projects" selected={router.pathname === "/projects"} />
+                    <LandingButton name="Tech" link="/tech" selected={router.pathname === "/tech"} />
                     <LandingButton name="Blog" link="https://saig-blog.vercel.app/" selected={false} />
                 </div>
 
@@ -179,7 +166,7 @@ const Nav = () => {
                 </div>
             </motion.div>
 
-            <motion.div className="xs:hidden z-[990] fixed w-full text-white flex flex-row justify-between items-center px-4 py-3 bg-white/0 dark:bg-[#262626]/0">
+            <motion.div className="xs:hidden z-[990] fixed w-full text-white flex flex-row justify-between items-center px-4 py-3 bg-white/0 dark:bg-[#0d0d0d]/0">
                 <div className="flex flex-row items-center justify-between gap-2"></div>
 
                 <div className="flex flex-row text-white items-center justify-center">
@@ -207,7 +194,7 @@ const Nav = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.1, ease: "easeInOut" }}
-                            className="flex flex-col items-center justify-start mt-16 fixed w-full h-auto z-[700] bg-white dark:bg-[#262626] border-x border-b text-white border-slate-800/10"
+                            className="flex flex-col items-center justify-start mt-16 fixed w-full h-auto z-[700] bg-white dark:bg-[#0d0d0d] border-x border-b text-white border-slate-800/10"
                         >
                             <div className="flex flex-row w-full text-white justify-evenly">
                                 <MobileLandingButton
@@ -223,9 +210,21 @@ const Nav = () => {
                                     onClick={() => setMenuOpen(false)}
                                 />
                                 <MobileLandingButton
+                                    name="Work"
+                                    link="/work"
+                                    selected={router.pathname === "/work"}
+                                    onClick={() => setMenuOpen(false)}
+                                />
+                                <MobileLandingButton
                                     name="Projects"
                                     link="/projects"
                                     selected={router.pathname === "/projects"}
+                                    onClick={() => setMenuOpen(false)}
+                                />
+                                <MobileLandingButton
+                                    name="Tech"
+                                    link="/tech"
+                                    selected={router.pathname === "/tech"}
                                     onClick={() => setMenuOpen(false)}
                                 />
                                 <MobileLandingButton

@@ -66,7 +66,7 @@ const Status: React.FC = () => {
             </>
         ) : (
             <>
-                <p className="text-sm text-center font-medium text-zinc-600 dark:text-zinc-400">Not Coding in</p>
+                <p className="text-sm text-center font-medium text-zinc-600 dark:text-zinc-400">Developing in</p>
                 <p className="text-sm text-center font-medium text-zinc-600 dark:text-zinc-400">Visual Studio Code</p>
             </>
         );

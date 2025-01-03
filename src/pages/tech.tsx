@@ -28,7 +28,7 @@ interface Repo {
     language: string | null;
 }
 
-const Projects = () => {
+const Tech = () => {
     const [publicRepos, setPublicRepos] = useState<Repo[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
@@ -66,30 +66,38 @@ const Projects = () => {
             transition={{ ease: "easeOut", duration: 0.15 }}
             className="mt-36 w-full"
         >
-            <h1 className="mt-39 font-bold text-4xl md:text-5xl mb-12">Projects</h1>
+            <h1 className="mt-39 font-bold text-4xl md:text-5xl mb-12">Tech</h1>
 
             <h2 className="font-medium text-3xl mb-12">I.</h2>
+            <h3 className="font-medium text-xl mb-12">Tech Stack</h3>
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-6">
-                I am deeply committed to continuous growth and innovation. This commitment manifests through my active
-                engagement in developing open-source projects, which serve as a testament to my expanding expertise in
-                tools, languages, and frameworks. Additionally, I regularly participate in hackathons focused on social
-                good, fostering collaborative problem-solving for a positive impact on society. These endeavors not only
-                showcase my evolving skill set but also reflect my dedication to contributing meaningfully.
+                My expertise spans a diverse range of programming languages, cutting-edge technologies, and
+                industry-standard development tools. This versatility allows me to adapt to various project requirements
+                and deliver optimal solutions.
             </p>
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-2 mb-12 gap-2">
-                {filteredRepos.map(repo => (
-                    <RepoItem
-                        key={repo.name}
-                        name={repo.name}
-                        description={repo.description || "No description"}
-                        stars={repo.stargazers_count}
-                        forks={repo.forks_count}
-                        language={repo.language}
-                    />
-                ))}
+            <div className="w-full flex flex-wrap flex-row justify-center p-1 rounded-md bg-white/10 dark:bg-black/10 mb-12">
+                <TechItem icon={SiTypescript} name="TypeScript" />
+                <TechItem icon={SiGo} name="Go" />
+                <TechItem icon={SiReact} name="React.js" />
+                <TechItem icon={SiJavascript} name="JavaScript" />
+                <TechItem icon={SiNextJs} name="Next.js" />
+                <TechItem icon={SiTailwindCSS} name="TailwindCSS" />
+                <TechItem icon={SiCplusplus} name="C++" />
+                <TechItem icon={SiFirebase} name="Firebase" />
+                <TechItem icon={SiMysql} name="MySQL" />
+                <TechItem icon={SiAmazondynamodb} name="DynamoDB" />
+                <TechItem icon={SiAngular} name="Angular" />
+                <TechItem icon={SiGit} name="Git" />
+                <TechItem icon={SiPython} name="Python" />
+                <TechItem icon={SiAmazonaws} name="AWS" />
+                <TechItem icon={SiDocker} name="Docker" />
+                <TechItem icon={SiSwift} name="Swift" />
+                <TechItem icon={SiTerraform} name="Terraform" />
+                <TechItem icon={SiGrafana} name="Grafana" />
+                <TechItem icon={SiDotnet} name=".NET" />
             </div>
         </motion.div>
     );
 };
 
-export default Projects;
+export default Tech;

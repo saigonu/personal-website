@@ -1,6 +1,4 @@
 import React from "react";
-import { SiTwitter, SiDiscord } from "react-icons/si";
-import { FiMail } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -29,15 +27,6 @@ const About = () => {
                 full-stack web applications and creating engaging iOS applications and constantly looking for new
                 opportunities to explore new fields and push my boundaries. I'm interested in: full-stack development,
                 cloud computing, DevOps, and machine learning.
-            </p>
-
-            <h2 className="font-medium text-3xl mb-12">II.</h2>
-
-            <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
-                I have interned as a Software Engineer in the past and got to learn a lot about software development
-                (which over time I have learned is more than just coding). I have interned as a Software Engineer at
-                Bluebeam, Truckpedia, and Alameda County. (I don't want to get into the 'nitty-gritty' that is where my
-                Resume comes into play.)
             </p>
         </motion.div>
     );
