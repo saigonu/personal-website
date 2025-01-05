@@ -3,13 +3,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
     return (
-        <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ ease: "easeOut", duration: 0.15 }}
-            className="mt-36 w-full"
-        >
+        <div className="mt-36 w-full">
             <h1 className="mt-36 font-bold text-4xl md:text-5xl mb-12">About Me</h1>
 
             <h2 className="font-medium text-3xl mb-12">I.</h2>
@@ -28,7 +22,7 @@ const About = () => {
                 opportunities to explore new fields and push my boundaries. I'm interested in: full-stack development,
                 cloud computing, DevOps, and machine learning.
             </p>
-        </motion.div>
+        </div>
     );
 };
 

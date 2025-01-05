@@ -2,29 +2,13 @@ import "../globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import Nav from "../components/Nav";
-import { AnimatePresence } from "framer-motion";
-import { Router } from "next/router";
 import "react-tippy/dist/tippy.css";
-import NProgress from "nprogress";
-import "nprogress/nprogress.css";
 import { useEffect } from "react";
 import { ShootingStars } from "../components/ui/shooting-stars";
 import { StarsBackground } from "../components/ui/stars-background";
 import Footer from "@/components/Footer";
 
-Router.events.on("routeChangeStart", () => NProgress.start());
-Router.events.on("routeChangeComplete", () => NProgress.done());
-Router.events.on("routeChangeError", () => NProgress.done());
-
 function MyApp({ Component, pageProps, router }: AppProps) {
-    useEffect(() => {
-        if (typeof window === "undefined") {
-            return;
-        }
-
-        void new Audio("/pop.mp3").play().catch(() => null);
-    }, [router.pathname]);
-
     return (
         <>
             <Head>
@@ -34,7 +18,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                 <meta name="viewport" content="width=device-width,initial-scale=1" />
                 <meta name="theme-color" content="#000000" />
                 <meta name="keywords" content="sai, Sai Gonuguntla" />
-                <meta name="description" content="Sai Gonuguntla - Software Engineer" />
+                <meta name="description" content="I'm a full-stack developer, building meaningful products." />
                 <meta name="author" content="Sai Gonuguntla" />
             </Head>
 
@@ -66,9 +50,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
                 {/* Main Content */}
                 <div className="w-[80%] md:w-[45rem] relative z-30">
-                    <AnimatePresence exitBeforeEnter>
-                        <Component {...pageProps} key={router.pathname} />
-                    </AnimatePresence>
+                    <Component {...pageProps} key={router.pathname} />
                 </div>
             </div>
 

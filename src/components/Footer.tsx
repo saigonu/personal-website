@@ -37,14 +37,14 @@ const Footer = () => {
 
     return (
         <div className="w-full bg-[#0d0d0d]">
-            <motion.div className="w-full md:w-[50rem] mx-auto flex flex-row justify-between items-center text-white px-4 py-4 md:py-6">
-                <h1 className="text-lg font-medium">Sai Gonuguntla</h1>
-                <p className="text-sm text-gray-400">
+            <motion.div className="w-full md:w-[50rem] mx-auto  px-11 py-4 md:py-6">
+                <p className="text-sm font-normal text-gray-400">
                     {lastCommit.loading ? (
                         "Loading..."
                     ) : lastCommit.hash ? (
                         <>
-                            ● Last updated
+                            <div className="blink -translate-x-3/4" />
+                            Last updated{" "}
                             <a
                                 href="https://github.com/saigonu/personal-website"
                                 className="font-bold underline underline-offset-2 decoration-2 hover:no-underline decoration-sky-500"

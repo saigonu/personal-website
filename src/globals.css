@@ -51,3 +51,18 @@ a {
 .tippy-tooltip-content {
     color: #000;
 }
+
+.blink {
+    animation: blinker 2s linear infinite;
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    border: 1px solid green;
+    background-color: green;
+    border-radius: 100%;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0.6;
+    }
+}

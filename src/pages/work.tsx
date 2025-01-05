@@ -3,13 +3,7 @@ import { motion } from "framer-motion";
 
 const Work = () => {
     return (
-        <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ ease: "easeOut", duration: 0.15 }}
-            className="mt-36 w-full"
-        >
+        <div className="mt-36 w-full">
             <h1 className="mt-36 font-bold text-4xl md:text-5xl mb-12">Work</h1>
 
             <h2 className="font-medium text-3xl mb-12">I.</h2>
@@ -35,7 +29,7 @@ const Work = () => {
                 biophysical properties of neurons based on their electronic responses. By focusing on iterative
                 hyperparameter tuning, I was able to optimize algorithms and reduce model training time.
             </p>
-        </motion.div>
+        </div>
     );
 };
 
