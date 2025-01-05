@@ -1,11 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { SiTwitter, SiGithub, SiLinkedin } from "react-icons/si";
-import { FiMail } from "react-icons/fi";
+import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { classNames } from "../util/classNames";
 import { useState, useEffect } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+import { BiSolidEnvelope } from "react-icons/bi";
 
 const LandingButton = ({ name, link, selected }: { name: string; link: string; selected: boolean }) => {
     const isExternal = link.startsWith("http");
@@ -163,6 +163,12 @@ const Nav = () => {
                             <SiLinkedin className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
                         }
                     />
+                    <LinkButton
+                        href={"mailto:hi@saigonuguntla.tech"}
+                        icon={
+                            <BiSolidEnvelope className="w-7 h-8 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
+                        }
+                    />
                 </div>
             </motion.div>
 
@@ -244,6 +250,10 @@ const Nav = () => {
                                 <LinkButton
                                     href={"https://linkedin.com/in/saigonuguntla"}
                                     icon={<SiLinkedin className="w-6 h-6 cursor-pointer" />}
+                                />
+                                <LinkButton
+                                    href={"mailto:hi@saigonuguntla.tech"}
+                                    icon={<BiSolidEnvelope className="w-6 h-6 cursor-pointer" />}
                                 />
                             </div>
                         </motion.div>

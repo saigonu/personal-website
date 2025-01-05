@@ -44,7 +44,7 @@ const Footer = () => {
                         "Loading..."
                     ) : lastCommit.hash ? (
                         <>
-                            Last updated
+                            ● Last updated
                             <a
                                 href="https://github.com/saigonu/personal-website"
                                 className="font-bold underline underline-offset-2 decoration-2 hover:no-underline decoration-sky-500"
