@@ -55,8 +55,8 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                     </div>
                 </div>
             </div>
-            {/* Footer */}
-            <Footer />
+            {/* Footer
+            <Footer /> */}
         </>
     );
 }

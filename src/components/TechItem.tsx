@@ -7,12 +7,9 @@ interface TechProps {
 }
 
 export const TechItem = ({ icon: Icon, name }: TechProps) => {
-
     return (
-        <div
-            className="flex flex-col items-center p-2 cursor-pointer border-b"
-        >
-            <span className="mb-1">{Icon({ className: 'h-6 w-6' })}</span>
+        <div className="flex flex-col items-center p-2 border-b">
+            <span className="mb-1">{Icon({ className: "h-6 w-6" })}</span>
             <span>{name}</span>
         </div>
     );

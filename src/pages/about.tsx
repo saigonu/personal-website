@@ -12,7 +12,7 @@ const About = () => {
                 I am a Computer Science graduate from{" "}
                 <a
                     href="https://www.ucdavis.edu/"
-                    className="font-bold underline underline-offset-2 decoration-2 hover:no-underline decoration-sky-500"
+                    className="font-bold underline underline-offset-2 decoration-2 hover:no-underline decoration-yellow-500"
                 >
                     UC Davis
                 </a>{" "}
