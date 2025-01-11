@@ -21,7 +21,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                 <meta name="description" content="I'm a full-stack developer, building meaningful products." />
                 <meta name="author" content="Sai Gonuguntla" />
             </Head>
-
             <div className="relative text-black dark:text-white flex flex-row justify-center w-full h-full dark:from-black dark:to-[#292524] min-h-screen">
                 {/* Stars Background */}
                 <StarsBackground
@@ -44,16 +43,18 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                     starHeight={1}
                     className="absolute inset-0 z-10"
                 />
-
                 {/* Navigation */}
                 <Nav />
-
                 {/* Main Content */}
                 <div className="w-[80%] md:w-[45rem] relative z-30">
-                    <Component {...pageProps} key={router.pathname} />
+                    <div className="relative">
+                        <div className="absolute inset-0 opacity-75 backdrop-blur-3xl rounded-lg -m-4" />
+                        <div className="relative p-4">
+                            <Component {...pageProps} key={router.pathname} />
+                        </div>
+                    </div>
                 </div>
             </div>
-
             {/* Footer */}
             <Footer />
         </>

@@ -13,14 +13,12 @@ const Footer = () => {
             try {
                 const response = await fetch("https://api.github.com/repos/saigonu/personal-website/commits/main");
                 const data = await response.json();
-
                 const hash = data.sha.substring(0, 7);
                 const date = new Date(data.commit.author.date).toLocaleDateString("en-US", {
                     day: "numeric",
                     month: "long",
                     year: "numeric",
                 });
-
                 setLastCommit({
                     hash,
                     date,
@@ -31,19 +29,17 @@ const Footer = () => {
                 setLastCommit(prev => ({ ...prev, loading: false }));
             }
         };
-
         fetchLastCommit();
     }, []);
 
     return (
-        <div className="w-full bg-[#0d0d0d]">
-            <motion.div className="w-full md:w-[50rem] mx-auto  px-11 py-4 md:py-6">
+        <div className="w-full bg-[#0d0d0d] flex justify-center">
+            <motion.div className="w-full md:w-[50rem] px-4 py-4 md:py-6">
                 <p className="text-sm font-normal text-gray-400">
                     {lastCommit.loading ? (
                         "Loading..."
                     ) : lastCommit.hash ? (
                         <>
-                            <div className="blink -translate-x-3/4" />
                             Last updated{" "}
                             <a
                                 href="https://github.com/saigonu/personal-website"
