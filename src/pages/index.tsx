@@ -37,7 +37,7 @@ const Index = () => {
         <div className="mt-36 w-full text-center">
             <div></div>
             <h1 className="mt-24 font-bold text-4xl md:text-5xl mb-12 text-left">Sai Gonuguntla</h1>
-            <p className="italic text-gray-500 dark:text-gray-400 text-left">
+            <p className="text-gray-500 dark:text-gray-400 text-left">
                 {lastCommit.loading ? (
                     "Loading last updated info..."
                 ) : lastCommit.hash ? (
