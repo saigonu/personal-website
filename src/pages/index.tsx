@@ -40,8 +40,8 @@ const Index = () => {
 
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12 text-left">
                 Software was envisioned to embody, be light, and easy for usage. However, as we forge ahead with the
-                rapid development of new products, the burden of bloated code is beginning to take its toll. I am on
-                creating simple but effective, highly-scalable and real-time products for the future.
+                rapid development of new products, the burden of bloated code is beginning to take its toll. I am on a
+                mission for creating simple but effective, highly-scalable and real-time products for the future.
             </p>
             <p className="text-gray-600 dark:text-gray-400 leading-6 tracking-wide mb-12 text-left text-sm">
                 {lastCommit.loading ? (
