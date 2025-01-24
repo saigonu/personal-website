@@ -15,8 +15,7 @@ const Work = () => {
                 and Alameda County. At Bluebeam, I focused on enhancing observability and monitoring, gaining insight
                 into system performance and reliability. At Truckpedia, I contributed to mobile application development,
                 creating intuitive and functional user experiences. At Alameda County, I worked on full-stack web
-                development, building robust and user-friendly web solutions. For more details about my specific
-                contributions and achievements, please reach out for my resume.
+                development, building robust and user-friendly web solutions.
             </p>
 
             <h2 className="font-medium text-3xl mb-12">II.</h2>
@@ -24,10 +23,10 @@ const Work = () => {
             <h3 className="font-medium text-xl mb-12">Research</h3>
 
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
-                In addition to my professional experience, I have engaged in undergraduate research in machine learning,
-                where I engineered a Convolutional Neural Network (CNN) using Python and PyTorch. This model predicting
-                biophysical properties of neurons based on their electronic responses. By focusing on iterative
-                hyperparameter tuning, I was able to optimize algorithms and reduce model training time.
+                During my undergraduate research in machine learning, I developed a neural network to predict the
+                biophysical properties of neurons from their electronic response patterns. Initially, it was a
+                Convolutional Neural Neawork (CNN) but I developed it to a Long Short-Term Memory (LSTM) architecture
+                after identifying the strong temporal dependencies in the data.
             </p>
         </div>
     );

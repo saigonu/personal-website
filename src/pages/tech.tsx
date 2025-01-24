@@ -65,16 +65,15 @@ const Tech = () => {
             <h2 className="font-medium text-3xl mb-12">I.</h2>
             <h3 className="font-medium text-xl mb-12">Tech Stack</h3>
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-6">
-                My expertise spans a diverse range of programming languages, cutting-edge technologies, and
-                industry-standard development tools. This versatility allows me to adapt to various project requirements
-                and deliver optimal solutions.
+                I have experience with various programming languages and cutting-edge technologies. This versatility
+                allows me to adapt to project requirements and deliver optimal solutions.
             </p>
             <div className="w-full flex flex-wrap flex-row justify-center p-1 rounded-md bg-white/10 dark:bg-black/10 mb-12">
                 <TechItem icon={SiTypescript} name="TypeScript" />
                 <TechItem icon={SiGo} name="Go" />
-                <TechItem icon={SiReact} name="React.js" />
+                <TechItem icon={SiReact} name="ReactJS" />
                 <TechItem icon={SiJavascript} name="JavaScript" />
-                <TechItem icon={SiNextJs} name="Next.js" />
+                <TechItem icon={SiNextJs} name="NextJS" />
                 <TechItem icon={SiTailwindCSS} name="TailwindCSS" />
                 <TechItem icon={SiCplusplus} name="C++" />
                 <TechItem icon={SiFirebase} name="Firebase" />
@@ -90,6 +89,69 @@ const Tech = () => {
                 <TechItem icon={SiGrafana} name="Grafana" />
                 <TechItem icon={SiDotnet} name=".NET" />
             </div>
+            <h2 className="font-medium text-3xl mb-12">II.</h2>
+            <h3 className="font-medium text-xl mb-12">Tools</h3>
+            <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide ml-4 mb-6">
+                <li>
+                    <a
+                        className="underline underline-offset-2 decoration-2 hover:no-underline decoration-white-20"
+                        href="https://arc.net/"
+                    >
+                        Arc Browser
+                    </a>
+                    <span className="ml-6 text-sm block">
+                        Chromium browser that offers a clean UI, tab management, and comfort of life features.
+                    </span>
+                </li>
+
+                <li>
+                    <a
+                        className="underline underline-offset-2 decoration-2 hover:no-underline decoration-white-20"
+                        href="https://obsidian.md/"
+                    >
+                        Obsidian
+                    </a>
+                    <span className="ml-6 text-sm block">
+                        Self-syncing personal knowledge base & Markdown note-taking app.
+                    </span>
+                </li>
+
+                <li>
+                    <a
+                        className="underline underline-offset-2 decoration-2 hover:no-underline decoration-white-20"
+                        href="https://www.notion.com/product/calendar"
+                    >
+                        Notion Calendar
+                    </a>
+                    <span className="ml-6 text-sm block">
+                        Fast calendar with keyboard shortcuts, easy conferencing, & quick share availability.
+                    </span>
+                </li>
+
+                <li>
+                    <a
+                        className="underline underline-offset-2 decoration-2 hover:no-underline decoration-white-20"
+                        href="https://ghostty.org/"
+                    >
+                        Ghostty
+                    </a>
+                    <span className="ml-6 text-sm block">
+                        Fastest, feature-rich, & cross-platform terminal emulator.
+                    </span>
+                </li>
+
+                <li>
+                    <a
+                        className="underline underline-offset-2 decoration-2 hover:no-underline decoration-white-20"
+                        href="https://ghostty.org/"
+                    >
+                        Visual Studio Code
+                    </a>
+                    <span className="ml-6 text-sm block">
+                        Code editor with integrated Vim keybindings for efficiency.
+                    </span>
+                </li>
+            </p>
         </div>
     );
 };

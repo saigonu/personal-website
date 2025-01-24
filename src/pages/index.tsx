@@ -37,15 +37,21 @@ const Index = () => {
         <div className="mt-36 w-full text-center">
             <div></div>
             <h1 className="mt-24 font-bold text-4xl md:text-5xl mb-12 text-left">Sai Gonuguntla</h1>
-            <p className="text-gray-500 dark:text-gray-400 text-left">
+
+            <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12 text-left">
+                Software was envisioned to embody, be light, and easy for usage. However, as we forge ahead with the
+                rapid development of new products, the burden of bloated code is beginning to take its toll. I am on
+                creating simple but effective, highly-scalable and real-time products for the future.
+            </p>
+            <p className="text-gray-600 dark:text-gray-400 leading-6 tracking-wide mb-12 text-left text-sm">
                 {lastCommit.loading ? (
                     "Loading last updated info..."
                 ) : lastCommit.hash ? (
                     <>
-                        This website was last updated{" "}
+                        * This website was last updated{" "}
                         <a
                             href="https://github.com/saigonu/personal-website"
-                            className="underline underline-offset-2 decoration-2 hover:no-underline decoration-green-500"
+                            className="underline underline-offset-2 decoration-1 hover:no-underline"
                         >
                             @{lastCommit.hash}
                         </a>{" "}
@@ -54,17 +60,6 @@ const Index = () => {
                 ) : (
                     "Last updated: January 2025"
                 )}
-            </p>
-            <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12 text-left">
-                Software was envisioned to embody, be light, and easy for usage. However, as we forge ahead with the
-                rapid development of new products, the burden of bloated code is beginning to take its toll. I am{" "}
-                <a
-                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                    className="font-bold underline underline-offset-2 decoration-2 hover:no-underline decoration-sky-500"
-                >
-                    never going to give up
-                </a>{" "}
-                on creating simple but effective, highly-scalable and real-time products for the future.
             </p>
             <Status />
         </div>
