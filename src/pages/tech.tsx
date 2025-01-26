@@ -163,7 +163,7 @@ const Tech = () => {
                 <li>
                     <a
                         className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
-                        href="https://orbstack.dev/"
+                        href="https://insomnia.rest/"
                     >
                         Insomnia
                     </a>
