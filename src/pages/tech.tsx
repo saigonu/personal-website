@@ -94,19 +94,17 @@ const Tech = () => {
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide ml-4 mb-6">
                 <li>
                     <a
-                        className="underline underline-offset-2 decoration-2 hover:no-underline decoration-white-20"
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
                         href="https://arc.net/"
                     >
-                        Arc Browser
+                        Zen Browser
                     </a>
-                    <span className="ml-6 text-sm block">
-                        Chromium browser that offers a clean UI, tab management, and comfort of life features.
-                    </span>
+                    <span className="ml-6 text-sm block">Arc-like open source browser based on Firefox engine.</span>
                 </li>
 
                 <li>
                     <a
-                        className="underline underline-offset-2 decoration-2 hover:no-underline decoration-white-20"
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
                         href="https://obsidian.md/"
                     >
                         Obsidian
@@ -118,7 +116,7 @@ const Tech = () => {
 
                 <li>
                     <a
-                        className="underline underline-offset-2 decoration-2 hover:no-underline decoration-white-20"
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
                         href="https://www.notion.com/product/calendar"
                     >
                         Notion Calendar
@@ -130,7 +128,7 @@ const Tech = () => {
 
                 <li>
                     <a
-                        className="underline underline-offset-2 decoration-2 hover:no-underline decoration-white-20"
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
                         href="https://ghostty.org/"
                     >
                         Ghostty
@@ -142,13 +140,13 @@ const Tech = () => {
 
                 <li>
                     <a
-                        className="underline underline-offset-2 decoration-2 hover:no-underline decoration-white-20"
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
                         href="https://ghostty.org/"
                     >
                         Visual Studio Code
                     </a>
                     <span className="ml-6 text-sm block">
-                        Code editor with integrated Vim keybindings for efficiency.
+                        Lightweight and powerful code editor with a rich ecosystem of extensions.
                     </span>
                 </li>
             </p>

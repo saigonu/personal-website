@@ -51,7 +51,7 @@ const Index = () => {
                         * This website was last updated{" "}
                         <a
                             href="https://github.com/saigonu/personal-website"
-                            className="underline underline-offset-2 decoration-1 hover:no-underline"
+                            className="underline underline-offset-2 decoration-1 hover:text-white"
                         >
                             @{lastCommit.hash}
                         </a>{" "}
