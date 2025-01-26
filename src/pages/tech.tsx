@@ -97,9 +97,11 @@ const Tech = () => {
                         className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
                         href="https://arc.net/"
                     >
-                        Zen Browser
+                        Arc Browser
                     </a>
-                    <span className="ml-6 text-sm block">Arc-like open source browser based on Firefox engine.</span>
+                    <span className="ml-6 text-sm block">
+                        Chromium browser that offers a clean UI, tab management, and comfort of life features.
+                    </span>
                 </li>
 
                 <li>
@@ -141,13 +143,49 @@ const Tech = () => {
                 <li>
                     <a
                         className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
-                        href="https://ghostty.org/"
+                        href="https://code.visualstudio.com/"
                     >
                         Visual Studio Code
                     </a>
                     <span className="ml-6 text-sm block">
                         Lightweight and powerful code editor with a rich ecosystem of extensions.
                     </span>
+                </li>
+                <li>
+                    <a
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
+                        href="https://orbstack.dev/"
+                    >
+                        OrbStack
+                    </a>
+                    <span className="ml-6 text-sm block">Fast app to run Docker containers.</span>
+                </li>
+                <li>
+                    <a
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
+                        href="https://orbstack.dev/"
+                    >
+                        Insomnia
+                    </a>
+                    <span className="ml-6 text-sm block">UI for assembling curl requests.</span>
+                </li>
+                <li>
+                    <a
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
+                        href="https://www.raycast.com/"
+                    >
+                        Raycast
+                    </a>
+                    <span className="ml-6 text-sm block">Supercharged spotlight.</span>
+                </li>
+                <li>
+                    <a
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
+                        href="https://cleanshot.com/"
+                    >
+                        CleanShot X
+                    </a>
+                    <span className="ml-6 text-sm block">Screenshotting & screen recording tool.</span>
                 </li>
             </p>
         </div>
