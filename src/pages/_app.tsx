@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                 <meta name="description" content="I'm a full-stack developer, building meaningful products." />
                 <meta name="author" content="Sai Gonuguntla" />
             </Head>
-            <div className="relative text-black dark:text-white flex flex-row justify-center w-full h-full dark:from-black dark:to-[#292524] min-h-screen">
+            <div className="relative text-black dark:text-white flex flex-row justify-center w-full h-full dark:from-black dark:to-[#292524] min-h-screen pt-10">
                 {/* Stars Background */}
                 <StarsBackground
                     starDensity={0.001}

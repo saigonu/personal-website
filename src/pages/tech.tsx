@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { SiFirebase, SiMysql, SiAmazonaws, SiCplusplus, SiAmazondynamodb, SiAngular } from "react-icons/si";
+import { SiFirebase, SiMysql, SiCplusplus, SiAmazondynamodb, SiAngular } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 import {
@@ -82,7 +83,7 @@ const Tech = () => {
                 <TechItem icon={SiAngular} name="Angular" />
                 <TechItem icon={SiGit} name="Git" />
                 <TechItem icon={SiPython} name="Python" />
-                <TechItem icon={SiAmazonaws} name="AWS" />
+                <TechItem icon={FaAws} name="AWS" />
                 <TechItem icon={SiDocker} name="Docker" />
                 <TechItem icon={SiSwift} name="Swift" />
                 <TechItem icon={SiTerraform} name="Terraform" />

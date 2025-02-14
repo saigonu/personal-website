@@ -1,11 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { MdOutlineAlternateEmail } from "react-icons/md";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { classNames } from "../util/classNames";
 import { useState, useEffect } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
-import { BiSolidEnvelope } from "react-icons/bi";
 
 const LandingButton = ({ name, link, selected }: { name: string; link: string; selected: boolean }) => {
     const isExternal = link.startsWith("http");
@@ -135,9 +135,10 @@ const Nav = () => {
         <>
             <motion.div
                 className={classNames(
-                    "hidden z-[999] fixed top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[50rem] xs:flex flex-row justify-between items-center text-white px-4 py-4 md:py-6 rounded-md bg-[#0d0d0d] transition-all",
+                    "hidden z-[999] fixed top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[50rem] xs:flex flex-row justify-between items-center text-white px-10 py-4 md:py-6 rounded-b-md bg-[#0d0d0d] transition-all",
                     scrollY > 50 ? "backdrop-blur-md bg-white/30 dark:bg-[#0d0d0d]/75" : "bg-transparent"
                 )}
+                style={{ height: "15rem", minHeight: "15rem" }}
             >
                 <div className="flex flex-row items-center justify-between gap-2">
                     <LandingButton name="Home" link="/" selected={router.pathname === "/"} />
@@ -146,29 +147,29 @@ const Nav = () => {
                     <LandingButton name="Projects" link="/projects" selected={router.pathname === "/projects"} />
                     <LandingButton name="Tech" link="/tech" selected={router.pathname === "/tech"} />
                     <LandingButton name="Blog" link="https://saig-blog.vercel.app/" selected={false} />
-                </div>
 
-                <div className="flex flex-row items-center justify-center gap-2 xs:gap-4">
-                    <LinkButton
-                        title="GitHub"
-                        href={"https://github.com/saigonu"}
-                        icon={
-                            <SiGithub className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
-                        }
-                    />
-                    <LinkButton
-                        title="LinkedIn"
-                        href={"https://linkedin.com/in/saigonuguntla"}
-                        icon={
-                            <SiLinkedin className="w-6 h-6 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
-                        }
-                    />
-                    <LinkButton
-                        href={"mailto:hi@saigonuguntla.tech"}
-                        icon={
-                            <BiSolidEnvelope className="w-7 h-8 cursor-pointer hover:fill-white fill-gray-400 transition-colors" />
-                        }
-                    />
+                    <div className="flex flex-row items-center justify-center gap-6 xs:gap-6 pl-6 ml-20">
+                        <LinkButton
+                            title="GitHub"
+                            href={"https://github.com/saigonu"}
+                            icon={
+                                <FiGithub className="w-5 h-5 cursor-pointer hover:text-white text-neutral-500 transition-colors" />
+                            }
+                        />
+                        <LinkButton
+                            title="LinkedIn"
+                            href={"https://linkedin.com/in/saigonuguntla"}
+                            icon={
+                                <FiLinkedin className="w-5 h-5 cursor-pointer hover:text-white text-neutral-500 transition-colors" />
+                            }
+                        />
+                        <LinkButton
+                            href={"mailto:hi@saigonuguntla.tech"}
+                            icon={
+                                <MdOutlineAlternateEmail className="w-5 h-5 cursor-pointer hover:text-white text-neutral-500 transition-colors" />
+                            }
+                        />
+                    </div>
                 </div>
             </motion.div>
 
@@ -242,18 +243,18 @@ const Nav = () => {
                             </div>
 
                             {/* Social Links */}
-                            <div className="flex flex-row items-center justify-center gap-6 py-4 mt-4">
+                            <div className="flex flex-row items-center justify-center gap-3 py-4 mt-4">
                                 <LinkButton
                                     href={"https://github.com/saigonu"}
-                                    icon={<SiGithub className="w-6 h-6 cursor-pointer" />}
+                                    icon={<FiGithub className="w-5 h-5 cursor-pointer" />}
                                 />
                                 <LinkButton
                                     href={"https://linkedin.com/in/saigonuguntla"}
-                                    icon={<SiLinkedin className="w-6 h-6 cursor-pointer" />}
+                                    icon={<FiLinkedin className="w-5 h-5 cursor-pointer" />}
                                 />
                                 <LinkButton
                                     href={"mailto:hi@saigonuguntla.tech"}
-                                    icon={<BiSolidEnvelope className="w-6 h-6 cursor-pointer" />}
+                                    icon={<MdOutlineAlternateEmail className="w-5 h-5 cursor-pointer" />}
                                 />
                             </div>
                         </motion.div>
