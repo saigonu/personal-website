@@ -98,7 +98,7 @@ const Status: React.FC = () => {
 
     const renderListeningDetails = () => {
         return listening ? (
-            <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400 truncate">
+            <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400 overflow-wrap break-word">
                 by{" "}
                 <span className="font-medium dark:font-semibold text-zinc-500 dark:text-zinc-200">
                     {listening.artist}
