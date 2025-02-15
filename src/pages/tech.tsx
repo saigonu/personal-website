@@ -96,12 +96,12 @@ const Tech = () => {
                 <li>
                     <a
                         className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
-                        href="https://arc.net/"
+                        href="https://zen-browser.app/"
                     >
-                        Arc Browser
+                        Zen Browser
                     </a>
                     <span className="ml-6 text-sm block">
-                        Chromium browser that offers a clean UI, tab management, and comfort of life features.
+                        Arc-like open-source browser based on the Firefox engine.
                     </span>
                 </li>
 
@@ -149,8 +149,17 @@ const Tech = () => {
                         Visual Studio Code
                     </a>
                     <span className="ml-6 text-sm block">
-                        Lightweight and powerful code editor with a rich ecosystem of extensions.
+                        Primary code editor only with Vim plugin for bigger codebases.
                     </span>
+                </li>
+                <li>
+                    <a
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
+                        href="https://neovim.io/"
+                    >
+                        Neovim
+                    </a>
+                    <span className="ml-6 text-sm block">Alternate code editor for everything else.</span>
                 </li>
                 <li>
                     <a

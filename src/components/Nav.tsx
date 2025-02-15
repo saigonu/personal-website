@@ -135,10 +135,9 @@ const Nav = () => {
         <>
             <motion.div
                 className={classNames(
-                    "hidden z-[999] fixed top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[50rem] xs:flex flex-row justify-between items-center text-white px-10 py-4 md:py-6 rounded-b-md bg-[#0d0d0d] transition-all",
-                    scrollY > 50 ? "backdrop-blur-md bg-white/30 dark:bg-[#0d0d0d]/75" : "bg-transparent"
+                    "hidden z-[999] fixed top-0 pt-10 left-1/2 transform -translate-x-1/2 w-full md:w-[50rem] xs:flex flex-row justify-between items-center text-white px-10 rounded-b-md bg-[#0d0d0d] transition-all",
+                    scrollY > 50 ? "backdrop-blur-sm bg-white/30 dark:bg-[#0d0d0d]/75" : "bg-transparent"
                 )}
-                style={{ height: "15rem", minHeight: "15rem" }}
             >
                 <div className="flex flex-row items-center justify-between gap-2">
                     <LandingButton name="Home" link="/" selected={router.pathname === "/"} />
