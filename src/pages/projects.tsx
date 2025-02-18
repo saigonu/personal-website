@@ -49,8 +49,8 @@ const Projects = () => {
                 I am deeply committed to continuous growth and innovation. This commitment manifests through my active
                 engagement in developing open-source projects, which serve as a testament to my expanding expertise in
                 tools, languages, and frameworks. Additionally, I regularly participate in hackathons focused on social
-                good, fostering collaborative problem-solving for a positive impact on society. These endeavors not only
-                showcase my evolving skill set but also reflect my dedication to contributing meaningfully.
+                good, fostering collaborative problem-solving for a positive impact on society. These endeavors showcase
+                my skills and reflect my dedication to contributing meaningfully.
             </p>
             <div className="w-full grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-2 mb-12 gap-2">
                 {filteredRepos.map(repo => (

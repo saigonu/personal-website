@@ -147,7 +147,7 @@ const Nav = () => {
                     <LandingButton name="Tech" link="/tech" selected={router.pathname === "/tech"} />
                     <LandingButton name="Blog" link="https://saig-blog.vercel.app/" selected={false} />
 
-                    <div className="flex flex-row items-center justify-center gap-6 xs:gap-6 pl-6 ml-20">
+                    <div className="flex flex-row items-center justify-center gap-6 xs:gap-6 pl-7 ml-20">
                         <LinkButton
                             title="GitHub"
                             href={"https://github.com/saigonu"}
