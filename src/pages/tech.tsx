@@ -95,16 +95,13 @@ const Tech = () => {
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide ml-4 mb-6">
                 <li>
                     <a
-                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
-                        href="https://zen-browser.app/"
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white hover:cursor-alias"
+                        href="https://arc.net/"
                     >
-                        Zen Browser
+                        Arc Browser
                     </a>
-                    <span className="ml-6 text-sm block">
-                        Arc-like open-source browser based on the Firefox engine.
-                    </span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ browser ]</span>
                 </li>
-
                 <li>
                     <a
                         className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
@@ -112,23 +109,8 @@ const Tech = () => {
                     >
                         Obsidian
                     </a>
-                    <span className="ml-6 text-sm block">
-                        Self-syncing personal knowledge base & Markdown note-taking app.
-                    </span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ note-taking ]</span>
                 </li>
-
-                <li>
-                    <a
-                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
-                        href="https://www.notion.com/product/calendar"
-                    >
-                        Notion Calendar
-                    </a>
-                    <span className="ml-6 text-sm block">
-                        Fast calendar with keyboard shortcuts, easy conferencing, & quick share availability.
-                    </span>
-                </li>
-
                 <li>
                     <a
                         className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
@@ -136,9 +118,7 @@ const Tech = () => {
                     >
                         Ghostty
                     </a>
-                    <span className="ml-6 text-sm block">
-                        Fastest, feature-rich, & cross-platform terminal emulator.
-                    </span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ terminal emulator ]</span>
                 </li>
 
                 <li>
@@ -148,9 +128,7 @@ const Tech = () => {
                     >
                         Visual Studio Code
                     </a>
-                    <span className="ml-6 text-sm block">
-                        Primary code editor only with Vim plugin for bigger codebases.
-                    </span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ primary IDE ]</span>
                 </li>
                 <li>
                     <a
@@ -159,7 +137,16 @@ const Tech = () => {
                     >
                         Neovim
                     </a>
-                    <span className="ml-6 text-sm block">Alternate code editor for everything else.</span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ secondary IDE ]</span>
+                </li>
+                <li>
+                    <a
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
+                        href="https://github.com/nikitabobko/AeroSpace"
+                    >
+                        Aerospace
+                    </a>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ window manager ]</span>
                 </li>
                 <li>
                     <a
@@ -168,7 +155,9 @@ const Tech = () => {
                     >
                         OrbStack
                     </a>
-                    <span className="ml-6 text-sm block">Fast app to run Docker containers.</span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">
+                        [ docker desktop alternative ]
+                    </span>
                 </li>
                 <li>
                     <a
@@ -177,7 +166,7 @@ const Tech = () => {
                     >
                         Insomnia
                     </a>
-                    <span className="ml-6 text-sm block">UI for assembling curl requests.</span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ curl requests UI ]</span>
                 </li>
                 <li>
                     <a
@@ -186,7 +175,7 @@ const Tech = () => {
                     >
                         Raycast
                     </a>
-                    <span className="ml-6 text-sm block">Supercharged spotlight.</span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ spotlight ]</span>
                 </li>
                 <li>
                     <a
@@ -195,7 +184,7 @@ const Tech = () => {
                     >
                         CleanShot X
                     </a>
-                    <span className="ml-6 text-sm block">Screenshotting & screen recording tool.</span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ screen-shotting/recording ]</span>
                 </li>
             </p>
         </div>
