@@ -66,7 +66,7 @@ const Status: React.FC = () => {
             </>
         ) : (
             <>
-                <p className="text-sm text-center font-medium text-zinc-600 dark:text-zinc-400">Developing in</p>
+                <p className="text-sm text-center font-medium text-zinc-600 dark:text-zinc-400">Not Coding in</p>
                 <p className="text-sm text-center font-medium text-zinc-600 dark:text-zinc-400">Visual Studio Code</p>
             </>
         );
@@ -110,7 +110,7 @@ const Status: React.FC = () => {
     };
 
     return (
-        <div className="grid grid-cols-1 gap-4 mt-8 mb-10 sm:mb-0 sm:grid sm:grid-cols-2 sm:gap-4">
+        <div className="grid rounded-md grid-cols-1 gap-4 mt-8 mb-10 sm:mb-0 sm:grid sm:grid-cols-2 sm:gap-4">
             {renderCodingContent()}
             {renderListeningContent()}
         </div>
