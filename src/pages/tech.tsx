@@ -100,91 +100,91 @@ const Tech = () => {
                     >
                         Arc Browser
                     </a>
-                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ browser ]</span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ Browser ]</span>
                 </li>
                 <li>
                     <a
-                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white hover:cursor-alias"
                         href="https://obsidian.md/"
                     >
                         Obsidian
                     </a>
-                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ note-taking ]</span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ Note-taking ]</span>
                 </li>
                 <li>
                     <a
-                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white hover:cursor-alias"
                         href="https://ghostty.org/"
                     >
                         Ghostty
                     </a>
-                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ terminal emulator ]</span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ Terminal Emulator ]</span>
                 </li>
 
                 <li>
                     <a
-                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white hover:cursor-alias"
                         href="https://code.visualstudio.com/"
                     >
                         Visual Studio Code
                     </a>
-                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ primary IDE ]</span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ Primary IDE ]</span>
                 </li>
                 <li>
                     <a
-                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white hover:cursor-alias"
                         href="https://neovim.io/"
                     >
                         Neovim
                     </a>
-                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ secondary IDE ]</span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ Secondary IDE ]</span>
                 </li>
                 <li>
                     <a
-                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white hover:cursor-alias"
                         href="https://github.com/nikitabobko/AeroSpace"
                     >
                         Aerospace
                     </a>
-                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ window manager ]</span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ Window Manager ]</span>
                 </li>
                 <li>
                     <a
-                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white hover:cursor-alias"
                         href="https://orbstack.dev/"
                     >
                         OrbStack
                     </a>
                     <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">
-                        [ docker desktop alternative ]
+                        [ Docker Desktop Alternative ]
                     </span>
                 </li>
                 <li>
                     <a
-                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white hover:cursor-alias"
                         href="https://insomnia.rest/"
                     >
                         Insomnia
                     </a>
-                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ curl requests UI ]</span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ Curl Requests UI ]</span>
                 </li>
                 <li>
                     <a
-                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white hover:cursor-alias"
                         href="https://www.raycast.com/"
                     >
                         Raycast
                     </a>
-                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ spotlight ]</span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ Spotlight ]</span>
                 </li>
                 <li>
                     <a
-                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white"
+                        className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white hover:cursor-alias"
                         href="https://cleanshot.com/"
                     >
                         CleanShot X
                     </a>
-                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ screen-shotting/recording ]</span>
+                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ Screen-Shotting/Recording ]</span>
                 </li>
             </p>
         </div>
