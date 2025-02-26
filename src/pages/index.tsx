@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Status from "../components/Status";
 
 const Index = () => {
     const [lastCommit, setLastCommit] = useState({
@@ -61,7 +60,7 @@ const Index = () => {
                     "Last updated: January 2025"
                 )}
             </p>
-            <Status />
+            {/* <Status /> */}
         </div>
     );
 };
