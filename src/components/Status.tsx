@@ -2,7 +2,7 @@ import { useLanyardWS } from "use-lanyard";
 import React from "react";
 
 // const Status: React.FC = () => {
-//     const data = useLanyardWS("630893334927507466");
+//     const data = useLanyardWS("");
 //
 //     const listening = data?.spotify || null;
 //     const coding = data?.activities?.find((a: { name: string }) => a.name === "Visual Studio Code") || null;
