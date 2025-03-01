@@ -98,7 +98,7 @@ const Tech = () => {
                         className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white hover:cursor-alias"
                         href="https://arc.net/"
                     >
-                        Arc Browser
+                        Arc
                     </a>
                     <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">[ Browser ]</span>
                 </li>
@@ -151,9 +151,9 @@ const Tech = () => {
                 <li>
                     <a
                         className="underline underline-offset-2 decoration-2 decoration-white-20 hover:text-white hover:cursor-alias"
-                        href="https://orbstack.dev/"
+                        href="https://podman.io/"
                     >
-                        OrbStack
+                        Podman
                     </a>
                     <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">
                         [ Docker Desktop Alternative ]
